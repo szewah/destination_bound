@@ -1,0 +1,111 @@
+body {
+    background-color: #c5d4d9;
+    font-family: 'Marmelad', sans-serif;
+}
+
+.jumbotron {
+    background-color: #3e4d2b;
+    color: white;
+    transform: skewY(-12deg);
+    transform-origin: top left;
+    z-index: -1;
+    height: 400px;
+}
+
+.container {
+    position: relative;
+    top: -270px;
+}
+
+table {
+    background-color: white;
+    width: 80% !important;
+    margin: auto;
+        box-shadow: 0 4px 8px 0
+     rgba(0, 0, 0, 0.2), 0 6px 20px 0
+      rgba(0, 0, 0, 0.19);
+}
+
+form {
+    font-weight: bold;
+    width: 70%;
+    margin: auto;
+    border: 5px solid #ffa500;
+    background-color: white;
+    box-shadow: 0 4px 8px 0
+     rgba(0, 0, 0, 0.2), 0 6px 20px 0
+      rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: -342px;
+    color: white;
+    font-size: 60px;
+}
+
+h6 {
+    text-align: center;
+    position: relative;
+    top: -342px;
+    color: white;
+}
+#current-schedule-text {
+    margin-bottom: 0;
+}
+
+#heading {
+    background-color:#ffa500;
+    width: 80%;
+    margin: auto;
+}
+
+h4 {
+    padding-left: 8px;
+    line-height: 50px;
+}
+
+label {
+    padding: 5px;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+}
+
+.btn {
+    background-color: #3e4d2b;
+    width: 20%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:  991px) {
+    #heading {
+        width: 100%;
+        }
+    table {
+        width: 100% !important;
+    }
+    form {
+        width: 100%;
+    }
+    h1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   h1 {
+    font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 44px;
+    }
+ }
+ 
