@@ -53,12 +53,17 @@ h6 {
 }
 #current-schedule-text {
     margin-bottom: 0;
+
 }
 
 #heading {
     background-color:#ffa500;
     width: 80%;
     margin: auto;
+}
+
+#submit-heading {
+    background-color:#ffa500;
 }
 
 h4 {
