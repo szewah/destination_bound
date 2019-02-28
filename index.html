@@ -10,35 +10,26 @@
     <title>Train Scheduler</title>
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
-    </div>
+
+    <div class="jumbotron jumbotron-fluid"></div>
     <h1>DESTINATION BOUND</h1>
     <h6>The ultimate train time table app</h6>
-    </header>
+    
     <div class="container">
-    <table class="table">
-        <div id="heading">
-        <h4 id="current-schedule-text">Current Train Schedule</h4>
-        </div>
-        <thead>
-            <tr>
-            <th scope="col">Train Name</th>
-            <th scope="col">Destination</th>
-            <th scope="col">Frequency</th>
-            <th scope="col">Next Arrival</th>
-            <th scope="col">Minutes Away</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td class="train-td"></td>
-            <td class="destination-td"></td>
-            <td class="frequency-td"></td>
-            <td class="train-time-td"></td>
-            <td class="minutes-away-td"></td>
-            </tr>
-        </tbody>
-    </table>
+
+        <table class="table">
+            <div id="heading">
+                <h4>Current Train Schedule</h4>
+            </div>
+            <thead id="train-table-header">
+                <th>Train</th>
+                <th>Destination</th>
+                <th>Next train</th>
+                <th>Frequency</th>
+                <th>Minutes Away</th>
+            </thead>
+            <tbody id="train-table-body"></tbody>
+        </table>
                   
         <form id="add-train">
             <div id="submit-heading">
@@ -46,22 +37,26 @@
             </div>
             <div class="form-group">
                 <label for="train name">Train Name</label>
-                <input type="text" class="form-control" id="train-name" aria-describedby="train-name">
+                <input type="text" class="form-control train-name" aria-describedby="train-name">
             </div>
             <div class="form-group">
                 <label for="destination">Destination</label>
-                <input type="text" class="form-control" id="destination" aria-describedby="destination">
+                <input type="text" class="form-control dest-destination" aria-describedby="destination">
             </div>
             <div class="form-group">
-                <label for="train-time">First Train Time</label>
-                <input type="text" class="form-control" id="first-train-time" aria-describedby="first-train-time">
+                <label for="train-time">Next Train</label>
+                <input type="text" class="form-control next-train-time" aria-describedby="first-train-time">
             </div>
             <div class="form-group">
                 <label for="frequency">Frequency (mins)</label>
-                <input type="text" class="form-control" id="frequency" aria-describedby="frequency">
+                <input type="text" class="form-control frequency" aria-describedby="frequency">
             </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button id="add-train-btn" type="submit" class="btn btn-primary">Add</button>
         </form>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="app.js"></script>    
 </body>
