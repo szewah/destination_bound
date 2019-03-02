@@ -1,11 +1,14 @@
 var config = {
-};
+    apiKey: "AIzaSyA2vZH3EegVXUPAw3AOknEGYOu8auYv3uE",
+    authDomain: "fabulous-project-demo.firebaseapp.com",
+    databaseURL: "https://fabulous-project-demo.firebaseio.com",
+    projectId: "fabulous-project-demo",
+    storageBucket: "fabulous-project-demo.appspot.com",
+    messagingSenderId: "322665992078"
+  };
 
 firebase.initializeApp(config);
 var database = firebase.database();
-
-$("#heading").hide();
-$("#train-table-header").hide();
 
 var trainName;
 var destination;
@@ -33,15 +36,18 @@ $("#add-train-btn").on('click', function() {
 });
 
 database.ref().on("child_added", function(snapshot) {
-    $("#heading").show();
     $("#train-table-header").show();
+    $("#heading").show();
+
     renderTable(snapshot.val());
     },
+
     function(errorObject) {
         console.log("Error handled: " + errorObject.code)
 });
 
 function renderTable(obj) {
+    
     var mins = calculateMins(obj.nextTrain);
     var tableRow = $("<tr class='table-row'>");
     var trainTableName = $("<td class='train-table-name'>").text(obj.name);
@@ -69,3 +75,5 @@ function calculateMins(time) {
 };
 
 
+$("#train-table-header").hide();
+$("#heading").hide();
